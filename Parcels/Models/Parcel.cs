@@ -14,5 +14,10 @@ namespace Parcels.Models
         Width = width;
         Height = height;
     }
+
+    public double Volume()
+    {
+      return Length * Width * Height;
+    }
   }
 }
