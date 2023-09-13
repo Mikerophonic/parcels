@@ -10,7 +10,7 @@ namespace Parcels.Tests
     [TestMethod]
     public void ParcelConstructor_CreatesInstanceOfParcel_Parcel()
     {
-      Parcel newParcel = new Parcel();
+      Parcel newParcel = new Parcel(5, 3, 6, 9);
       Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
 
@@ -18,15 +18,15 @@ namespace Parcels.Tests
     public void GetProperties_ReturnsProperties_Double()
     {
       Parcel newParcel = new Parcel(5, 3, 6, 9);
-      string weight = newParcel.Weight;
-      string length = newParcel.Length;
-      string width = newParcel.Width;
-      string height = newParcel.Height;
+      double weight = newParcel.Weight;
+      double length = newParcel.Length;
+      double width = newParcel.Width;
+      double height = newParcel.Height;
 
       Assert.AreEqual(5, weight);
-      Assert.AreEqual(3, weight);
-      Assert.AreEqual(6, weight);
-      Assert.AreEqual(9, weight);
+      Assert.AreEqual(3, length);
+      Assert.AreEqual(6, width);
+      Assert.AreEqual(9, height);
 
     }
 

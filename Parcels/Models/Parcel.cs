@@ -2,17 +2,17 @@ namespace Parcels.Models
 {
   public class Parcel
   {
-    public double weight { get; set; }
-    public double length { get; set; }
-    public double width { get; set; }
-    public double height { get; set; }
+    public double Weight { get; set; }
+    public double Length { get; set; }
+    public double Width { get; set; }
+    public double Height { get; set; }
 
-    // public Parcel(double weight, double length, double width, double height)
-    // {
-    //     Weight = weight;
-    //     Length = length;
-    //     Width = width;
-    //     Height = height;
-    // }
+    public Parcel(double weight, double length, double width, double height)
+    {
+        Weight = weight;
+        Length = length;
+        Width = width;
+        Height = height;
+    }
   }
 }
