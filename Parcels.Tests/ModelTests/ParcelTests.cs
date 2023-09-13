@@ -30,6 +30,22 @@ namespace Parcels.Tests
 
     }
 
+    [TestMethod]
+    public void SetProperties_SetsProperties_Void()
+    {
+      Parcel newParcel = new Parcel(2, 2, 4, 3);
+      double newWeight = 2;
+      newParcel.Weight = newWeight;
+      Assert.AreEqual(newWeight, newParcel.Weight);
+    }
 
+    [TestMethod]
+    public void Volume_ReturnsVolumeOfParcel_Double()
+    {
+      Parcel newParcel = new Parcel(6, 3, 5, 3);
+      double expectedVolume = newParcel.Length * newParcel.Width * newParcel.Height;
+      double calcVolume = newParcel.Volume();
+      Assert.AreEqual(expectedVolume, calcVolume);
+    }
   }
 }
